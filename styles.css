@@ -1,0 +1,356 @@
+@charset "UTF-8";
+/*
+Theme Name: fd
+Author: Satoshi
+*/
+
+html {
+  font-size: 100%;
+}
+
+body {
+  color: #333;
+  font-size: .875rem;
+  position: relative;
+  min-height: 100vh;
+  /*ここがミソ*/
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+a:hover {
+  opacity: .7;
+}
+
+.wrapper {
+  max-width: 1360px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+#main {
+  padding: 80px 0;
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto, 4);
+  grid-template-columns: repeat(4, auto);
+  gap: 30px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.grid .item {
+  margin-bottom: 10px;
+}
+
+.grid .item a img {
+  margin-bottom: 10px;
+  vertical-align: top;
+}
+
+.grid .item a p {
+  font-size: .75rem;
+}
+
+.sec-title {
+  font-size: .9rem;
+  font-weight: normal;
+  padding: 35px 0;
+}
+
+/*------------------------------------
+header
+------------------------------------*/
+header {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  width: 100%;
+  height: 80px;
+}
+
+header img {
+  height: 20px;
+  vertical-align: top;
+}
+
+header #nav {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  padding: 36px 50px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  z-index: 20;
+  opacity: 0;
+}
+
+header #nav li {
+  margin-bottom: 14px;
+}
+
+header #nav li a {
+  color: white;
+  text-transform: uppercase;
+}
+
+header #nav.open {
+  left: 0;
+  opacity: 1;
+}
+
+header .menu-btn {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  cursor: pointer;
+  z-index: 20;
+}
+
+header .menu-btn span {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: #333;
+  border-radius: 4px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+header .menu-btn span:nth-child(1) {
+  top: 10px;
+}
+
+header .menu-btn span:nth-child(2) {
+  bottom: 10px;
+}
+
+header .menu-btn.open span:nth-child(1) {
+  -webkit-transform: translateY(4px) rotate(-45deg);
+  transform: translateY(4px) rotate(-45deg);
+  background-color: white;
+}
+
+header .menu-btn.open span:nth-child(2) {
+  -webkit-transform: translateY(-4px) rotate(45deg);
+  transform: translateY(-4px) rotate(45deg);
+  background-color: white;
+}
+
+header #mask {
+  display: none;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+header #mask.open {
+  display: block;
+  background-color: #000;
+  opacity: .8;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+/*------------------------------------
+recommend
+------------------------------------*/
+#recommend {
+  margin-bottom: 80px;
+}
+
+#recommend .btn {
+  text-align: center;
+  padding: 40px 0;
+}
+
+#recommend .btn a {
+  display: block;
+}
+
+/*------------------------------------
+products
+------------------------------------*/
+#products {
+  margin-bottom: 80px;
+}
+
+#products .btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+#products .btn li {
+  padding: 0 20px;
+}
+
+/*------------------------------------
+about
+------------------------------------*/
+#about {
+  margin-bottom: 80px;
+}
+
+#about p {
+  max-width: 600px;
+  margin-bottom: 30px;
+  line-height: 2em;
+}
+
+/*------------------------------------
+company
+------------------------------------*/
+#company .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 650px;
+}
+
+#company .info dt {
+  width: 30%;
+  padding: 20px;
+  border-bottom: solid 1px #DCDBDB;
+}
+
+#company .info dt:last-of-type {
+  border-bottom: none;
+}
+
+#company .info dd {
+  width: 70%;
+  padding: 20px;
+  border-bottom: solid 1px #DCDBDB;
+}
+
+#company .info dd:last-of-type {
+  border-bottom: none;
+}
+
+#company .map {
+  width: 650px;
+}
+
+#company .map iframe {
+  filter: grayscale(1);
+}
+
+/*------------------------------------
+product
+------------------------------------*/
+#product {
+  margin-bottom: 100px;
+}
+
+#product .product {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#product .product img {
+  height: 400px;
+  margin-right: 50px;
+}
+
+#product .product .detail p {
+  width: 340px;
+  line-height: 1.5em;
+  margin-bottom: 30px;
+}
+
+#product .product .detail dl {
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+#product .product .detail dl dt {
+  width: 100px;
+  text-transform: uppercase;
+}
+
+#product .product .detail dl dd {
+  width: 200px;
+}
+
+#product .btn {
+  text-align: center;
+  padding: 40px 0;
+}
+
+#product .btn a {
+  display: block;
+}
+
+/*------------------------------------
+footer
+------------------------------------*/
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  text-transform: uppercase;
+  margin-right: 30px;
+  font-size: .75rem;
+}
+
+footer p {
+  font-size: .65rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
