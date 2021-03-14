@@ -1,4 +1,4 @@
-
+<?php get_header(); ?>
 
   <main id="main">
     <section id="recommend" class="wrapper"> <!--div!?-->
@@ -65,3 +65,5 @@
       </div>
     </section>
   </main>
+
+<?php get_footer(); ?>
