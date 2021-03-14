@@ -197,14 +197,18 @@ products
   margin-bottom: 80px;
 }
 
-#products .btn {
+#products .pagination ul {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 40px 0;
 }
 
-#products .btn li {
-  padding: 0 20px;
+#products .pagination li {
+  padding: 0 10px;
+}
+
+#products .pagination ul a:hover {
+  opacity: 0.7;
 }
 
 /*------------------------------------
