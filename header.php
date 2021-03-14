@@ -5,14 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Furniture Design</title>
-
-  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <title><?php bloginfo('name'); ?></title>
+  <meta name="description" content="<?php bloginfo('description'); ?>">
+  <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/img/favicon.ico" type="image/x-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/main.js"></script>
 
   <?php wp_head(); ?>
 </head>
