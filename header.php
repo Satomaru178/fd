@@ -15,14 +15,15 @@
 
 <body>
   <header class="wrapper">
-    <a href="index.html"><img src="img/logo.svg" alt="mainlogo"></a>
-    <!--ここはh1で囲う-->
+    <h1>
+      <a href="<?php echo esc_url(home_url()); ?>"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/img/logo.svg" alt="mainlogo"></a>
+    </h1>
 
     <nav id="nav">
       <ul class="hidden-menu">
-        <li><a href="products.html">products</a></li>
-        <li><a href="about.html">about</a></li>
-        <li><a href="company.html">company</a></li>
+        <li><a href="">products</a></li>
+        <li><a href="">about</a></li>
+        <li><a href="">company</a></li>
         <li><a href="mailto:xxxx&#64;xxxx.xxxx.com?subject=お問い合わせ">contact</a></li>
       </ul>
     </nav>
