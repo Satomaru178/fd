@@ -27,7 +27,6 @@ li {
 a {
   text-decoration: none;
   color: #333;
-  -webkit-transition: all .5s;
   transition: all .5s;
 }
 
@@ -46,7 +45,6 @@ a:hover {
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(4, auto);
   gap: 30px;
@@ -317,8 +315,6 @@ footer {
   justify-content: space-between;
   height: 60px;
   align-items: center;
-  position: absolute;
-  bottom: 0;
 }
 
 footer ul {
