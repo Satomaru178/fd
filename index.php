@@ -1,67 +1,24 @@
 <?php get_header(); ?>
 
   <main id="main">
-    <section id="recommend" class="wrapper"> <!--div!?-->
+    <section id="recommend" class="wrapper">
       <ul class="grid">
-        <li class="item">
-          <a href="products/product1.html">
-            <img src="img/item1.jpg" alt="item1">
-            <p class="title">プロダクトタイトルプロダクトタイトル</p>
-            <p class="price">¥99,999 +tax</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="products/product2.html">
-            <img src="img/item2.jpg" alt="item2">
-            <p class="title">プロダクトタイトルプロダクトタイトル</p>
-            <p class="price">¥99,999 +tax</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="products/product3.html">
-            <img src="img/item3.jpg" alt="item3">
-            <p class="title">プロダクトタイトルプロダクトタイトル</p>
-            <p class="price">¥99,999 +tax</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="products/product4.html">
-            <img src="img/item4.jpg" alt="item4">
-            <p class="title">プロダクトタイトルプロダクトタイトル</p>
-            <p class="price">¥99,999 +tax</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="products/product5.html">
-            <img src="img/item5.jpg" alt="item5">
-            <p class="title">プロダクトタイトルプロダクトタイトル</p>
-            <p class="price">¥99,999 +tax</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="products/product6.html">
-            <img src="img/item6.jpg" alt="item6">
-            <p class="title">プロダクトタイトルプロダクトタイトル</p>
-            <p class="price">¥99,999 +tax</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="products/product7.html">
-            <img src="img/item7.jpg" alt="item7">
-            <p class="title">プロダクトタイトルプロダクトタイトル</p>
-            <p class="price">¥99,999 +tax</p>
-          </a>
-        </li>
-        <li class="item">
-          <a href="products/product8.html">
-            <img src="img/item8.jpg" alt="item8">
-            <p class="title">プロダクトタイトルプロダクトタイトル</p>
-            <p class="price">¥99,999 +tax</p>
-          </a>
-        </li>
+        <?php if(have_posts()): while(have_posts()): the_post(); ?>
+          <?php
+            $cat = get_the_category();
+            $catname = $cat[0]->cat_name;
+          ?>
+          <li class="item">
+            <a href="<?php the_permalink(); ?>">
+              <img src="<?php the_post_thumbnail_url('full'); ?>" alt="product-image">
+              <p class="title"><?php the_title(); ?></p>
+              <p class="price"><?php echo get_post_meta(get_the_ID(), 'price', true) ?> +tax</p>
+            </a>
+          </li>
+        <?php endwhile;endif; ?>
       </ul>
       <div class="btn">
-        <a href="products.html">View More</a>
+        <a href="<?php echo esc_url(home_url()); ?>/category/products/">View More</a>
       </div>
     </section>
   </main>
