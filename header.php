@@ -8,7 +8,6 @@
   <title><?php bloginfo('name'); ?></title>
   <meta name="description" content="<?php bloginfo('description'); ?>">
   <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/img/favicon.ico" type="image/x-icon">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <?php wp_head(); ?>
 </head>
