@@ -114,7 +114,7 @@ header #nav li a {
 }
 
 header #nav.open {
-  left: 100px;
+  left: 0px;
   top: 30px;
   opacity: 1;
 }
