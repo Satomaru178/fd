@@ -16,12 +16,13 @@
               <p class="price"><?php echo get_post_meta(get_the_ID(), 'price', true) ?> +tax</p>
             </a>
           </li>
-        <?php endwhile;endif; ?>
-      </ul>
-      <div class="btn">
-        <a href="<?php echo esc_url(home_url()); ?>/category/products/">View More</a>
-      </div>
-    </section>
-  </main>
+      <?php endwhile;
+      endif; ?>
+    </ul>
+    <div class="btn">
+      <a href="<?php echo esc_url(home_url()); ?>/category/products/">View More</a>
+    </div>
+  </section>
+</main>
 
 <?php get_footer(); ?>
