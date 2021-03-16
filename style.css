@@ -200,6 +200,10 @@ products
   margin-bottom: 80px;
 }
 
+#products>ul {
+  margin-bottom: 30px;
+}
+
 #products .pagination ul {
   display: flex;
   flex-wrap: wrap;
