@@ -313,7 +313,7 @@ product
 }
 
 #product .btn a {
-  display: block;
+  display: inline-block;
 }
 
 /*------------------------------------
