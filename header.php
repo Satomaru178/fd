@@ -20,9 +20,9 @@
 
     <nav id="nav">
       <ul class="hidden-menu">
-        <li><a href="">products</a></li>
-        <li><a href="">about</a></li>
-        <li><a href="">company</a></li>
+        <li><a href="<?php echo esc_url(home_url()); ?>/category/products/">products</a></li>
+        <li><a href="<?php echo esc_url(home_url()); ?>/about/">about</a></li>
+        <li><a href="<?php echo esc_url(home_url()); ?>/company/">company</a></li>
         <li><a href="mailto:xxxx&#64;xxxx.xxxx.com?subject=お問い合わせ">contact</a></li>
       </ul>
     </nav>
