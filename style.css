@@ -45,6 +45,12 @@ section {
   margin: 0 auto;
 }
 
+section {
+  padding-top: 120px;
+  padding-bottom: 160px;
+  margin-bottom: 80px;
+}
+
 #main {
   padding: 80px 0;
 }
