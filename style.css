@@ -239,6 +239,7 @@ company
   display: flex;
   margin-bottom: 20px;
   width: 650px;
+  flex-wrap: wrap;
 }
 
 #company .info dt {
